@@ -62,3 +62,32 @@ $ pip install .
 # if using pip and need to install dev's dependencies
 $ pip install -e ".[dev]"
 ```
+
+## Contributing
+
+We welcome contributions from the community! 🎉
+
+### Ways to Contribute
+
+- **Report Bugs**: Found a bug? Open an issue with detailed reproduction steps
+- **Suggest Features**: Have ideas for new features? We'd love to hear them!
+- **Improve Documentation**: Help make our docs clearer and more comprehensive
+- **Submit Code**: Fix bugs, add features, or improve performance
+- **Add Language Support**: Help us support more programming languages
+- **Improve LLM Prompts**: Enhance our agent prompts for better accuracy
+
+### Development Guidelines
+
+- Write clear, concise commit messages
+- Add tests for new features
+- Update documentation as needed
+- Follow the existing code style
+- Keep pull requests focused on a single feature/fix
+
+### Need Help?
+
+- Open an issue for questions or discussions
+- Check existing issues before creating new ones
+- Be respectful and constructive in all interactions
+
+Thank you for helping make Call Graph LLM Agent better! 🚀
