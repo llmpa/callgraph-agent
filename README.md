@@ -7,7 +7,34 @@ Call graphs. Zero boilerplate. Infinite scale.
 - Support **any** lines of code
 - Powered by multi-agents LLM
 
+## Architecture
 
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    Input: File or Directory                     │
+└────────────────────────────┬────────────────────────────────────┘
+                             │
+                             ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                        Doc Agent                                │
+│  • Extract function definitions from source code                │
+│  • Smart sliding window size for large files                    │
+│  • Returns: List of functions with locations                    │
+└────────────────────────────┬────────────────────────────────────┘
+                             │
+                             ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                     Call Graph Agent                            │
+│  • Extract call relationships for each function                 │
+│  • Smart sliding window size for function bodies                │
+│  • Returns: Edges connecting caller -> callee                   │
+└────────────────────────────┬────────────────────────────────────┘
+                             │
+                             ▼
+┌─────────────────────────────────────────────────────────────────┐
+│              Output: Call Graph (JSON/Graphviz/Stdout)          │
+└─────────────────────────────────────────────────────────────────┘
+```
 
 ## Usage
 Make sure installing dependencies(see [Dev](#dev)) first!
