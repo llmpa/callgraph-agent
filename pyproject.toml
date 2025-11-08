@@ -1,0 +1,21 @@
+[project]
+name = "callgraph-agent"
+version = "0.1.0"
+description = ""
+requires-python = ">=3.12"
+
+dependencies = [
+  "ollama",
+  "openai",
+  "tiktoken",
+  "pydantic"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "python-dotenv[cli]"
+]
+
+[project.scripts]
+callgraph-agent = "src.agent:main"

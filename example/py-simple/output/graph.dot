@@ -1,0 +1,14 @@
+digraph CallGraph {
+  rankdir=LR;
+  node [shape=box];
+
+  _home_sxia_callgraph_agent_callgraph_benchmark_python_project1_main_py_3_func_c [label="func_c\n/home/sxia/callgraph-agent/callgraph-benchmark/python/project1/main.py:3"];
+  _home_sxia_callgraph_agent_callgraph_benchmark_python_project1_main_py_6_func_b [label="func_b\n/home/sxia/callgraph-agent/callgraph-benchmark/python/project1/main.py:6"];
+  _home_sxia_callgraph_agent_callgraph_benchmark_python_project1_main_py_9_func_a [label="func_a\n/home/sxia/callgraph-agent/callgraph-benchmark/python/project1/main.py:9"];
+  _home_sxia_callgraph_agent_callgraph_benchmark_python_project1_main_py_12_main [label="main\n/home/sxia/callgraph-agent/callgraph-benchmark/python/project1/main.py:12"];
+
+  _home_sxia_callgraph_agent_callgraph_benchmark_python_project1_main_py_6_func_b -> _home_sxia_callgraph_agent_callgraph_benchmark_python_project1_main_py_3_func_c;
+  _home_sxia_callgraph_agent_callgraph_benchmark_python_project1_main_py_9_func_a -> _home_sxia_callgraph_agent_callgraph_benchmark_python_project1_main_py_6_func_b;
+  _home_sxia_callgraph_agent_callgraph_benchmark_python_project1_main_py_12_main -> _home_sxia_callgraph_agent_callgraph_benchmark_python_project1_main_py_9_func_a;
+  _home_sxia_callgraph_agent_callgraph_benchmark_python_project1_main_py_12_main -> _home_sxia_callgraph_agent_callgraph_benchmark_python_project1_main_py_6_func_b;
+}

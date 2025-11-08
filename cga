@@ -1,0 +1,4 @@
+#!/bin/env bash
+
+export PYTHONPATH="src:$PYTHONPATH"
+python src/cga_cli/main.py "$@"

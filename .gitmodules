@@ -1,0 +1,3 @@
+[submodule "callgraph-benchmark"]
+	path = callgraph-benchmark
+	url = https://github.com/llmpa/callgraph-benchmark.git
