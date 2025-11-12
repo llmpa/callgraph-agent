@@ -7,7 +7,7 @@ import os
 import sys
 from pathlib import Path
 
-from cga.callgraph_agent import CallGraphAgent
+from src.cga.agents.callgraph.callgraph_agent import CallGraphAgent
 from cga.llm import (
     GPTOSS_20B, GEMMA3_27B, GEMMA3_12B, DEEPSEEKR1_32B, DEEPSEEKR1_14B,
     GPT5, GPT5MINI, GPT5NANO, OllamaLLMClient
@@ -15,7 +15,7 @@ from cga.llm import (
 from cga.llm.client import LLMClient
 from cga.llm.openai import OpenAIClient
 from cga.utils.fs import CachedLocalFileSystem
-from cga.types import CallGraph
+from src.cga.agents.callgraph.types import CallGraph
 
 
 def format_callgraph_stdout(call_graph: CallGraph) -> str:

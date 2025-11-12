@@ -2,7 +2,7 @@ from abc import ABC
 import json
 from typing import Any
 import tiktoken
-from cga.actions import ActionProvider, AgentAction
+from cga.agents.actions import ActionProvider, AgentAction
 from cga.llm.client import LLMClient
 from cga.utils.llm_response import trim_json_markers
 import time
@@ -51,8 +51,8 @@ class Agent(ABC):
         return json.loads(trimmed_content)
 
     def add_action(self, action: AgentAction):
-        if action.name in self._actions:
-            raise ValueError(f"Action with name {action.name} already exists.")
+        # if action.name in self._actions:
+        #     raise ValueError(f"Action with name {action.name} already exists.")
         self._actions[action.name] = action
 
     def add_action_provider(self, provider: ActionProvider):

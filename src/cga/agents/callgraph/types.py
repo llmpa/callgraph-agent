@@ -23,3 +23,5 @@ class CallGraphEdge(BaseModel):
 class CallGraph(BaseModel):
     nodes: list[CallGraphNode]
     edges: list[CallGraphEdge]
+    
+    

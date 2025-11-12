@@ -1,8 +1,8 @@
-from cga.actions import ActionProvider, AgentAction, JsonSchema
-from cga.agent import Agent
-from cga.doc_agent import DocAgent
+from cga.agents.actions import ActionProvider, AgentAction, JsonSchema
+from cga.agents.agent import Agent
+from cga.agents.doc.doc_agent import DocAgent
 from cga.llm.client import LLMClient
-from cga.types import CallGraph, CallGraphEdge, CallGraphNode
+from cga.agents.callgraph.types import CallGraph, CallGraphEdge, CallGraphNode
 from cga.utils.fs import FileSystem
 import logging
 
@@ -117,6 +117,16 @@ class CallGraphAgent(Agent, ActionProvider):
                     )
                     edges.append(edge)
         return edges
+    
+    def _find_function_by_name(self, name: str, file: str, file_line:int) -> CallGraphNode | None:
+        # get candidates by name
+        candidates = [n for n in self._graph.nodes if n.name == name]
+        if not candidates:
+            return None
+        if len(candidates) == 1:
+            return candidates[0]
+        
+        # we can have different ways to 
 
     def _get_cg_prompt(self, content: str) -> str:
         prompt = (
